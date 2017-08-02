@@ -1,9 +1,14 @@
 
 body {
-  background-color: #D9AD32;
+  background-color: #A53F2B;
 }
 
-
+#searchWiki {
+  background-color: #CCC9A1;
+}
 .button1{
   background-color: #1FBB9C;
+  color: LightCyan;
 }
+
+/*https://coolors.co/ccc9a1-f0ffce-a53f2b-4c230a-280004*/
