@@ -25,16 +25,24 @@ function myButton2() {
             for(var j = 1; j <= data[1].length ; j++) {
               itemArr.push(new Array());
               for(var k = 1; k < data.length; k++) {
-                console.log(data[k][j]);
-                console.log("k" + k + "  " + "j" + j);
+                //console.log(data[k][j]);
+                //console.log("k" + k + "  " + "j" + j);
                 var item = data[k][j];
                 itemArr[j - 1].push(item);
               }
             }
-            console.log(itemArr);
-
-
-          //document.getElementById("message").innerHTML = html;
+          for (var m = 0; m < itemArr.length; m++) {
+            html += '<div class="item">';
+            console.log("inside first for loop to generate html");
+            for (var n = 0; n < itemArr[m].length; n++) {
+              //console.log(itemArr[m][n]);
+              
+               html += '<p>';
+               html += itemArr[m][n];
+               html += '</p>';
+            }
+          }
+          document.getElementById("message").innerHTML = html;
 				}
 
 			}
