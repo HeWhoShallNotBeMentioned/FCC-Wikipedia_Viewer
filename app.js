@@ -22,27 +22,39 @@ function myButton2() {
 				dataType: "json",
 				success: function(data){
           console.log("button2 works inside getJSON");
-            for(var j = 1; j <= data[1].length ; j++) {
+            for(var j = 0; j < data[1].length ; j++) {
               itemArr.push(new Array());
-              for(var k = 1; k < data.length; k++) {
+              for(var k = 0; k < data.length; k++) {
                 //console.log(data[k][j]);
                 //console.log("k" + k + "  " + "j" + j);
                 var item = data[k][j];
-                itemArr[j - 1].push(item);
+                itemArr[j].push(item);
               }
             }
+
           for (var m = 0; m < itemArr.length; m++) {
             html += '<div class="item">';
             console.log("inside first for loop to generate html");
-            for (var n = 0; n < itemArr[m].length; n++) {
+            for (var n = 1; n < itemArr[m].length; n++) {
               //console.log(itemArr[m][n]);
-              
-               html += '<p>';
-               html += itemArr[m][n];
-               html += '</p>';
+               if ( n == 3 ) {
+                 html += '<a href="';
+                 html += itemArr[m][n];
+                 html += '" target="_blank">Wikipedia Article</a>';
+
+               } else {
+
+                 html += '<p>';
+                 html += itemArr[m][n];
+                 html += '</p>';
+               }
+
             }
+              html += '</div>';
+              html += '<br>';
           }
-          document.getElementById("message").innerHTML = html;
+          console.log(itemArr);
+          document.getElementById("postHTML").innerHTML = html;
 				}
 
 			}
