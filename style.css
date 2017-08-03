@@ -2,13 +2,34 @@
 body {
   background-color: #A53F2B;
 }
+h3 {
+  color: SteelBlue ;
+}
 
 #searchWiki {
   background-color: #CCC9A1;
 }
-.button1{
+
+#postHTML {
+  background-color: #2F4F4F;
+}
+
+.item {
+  background-color: #CCC9A1;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+
+.button1 {
   background-color: #1FBB9C;
   color: LightCyan;
+  margin: 20px 0;
+}
+
+.button2 {
+  background-color: #280004;
+  color: #CCC9A1;
 }
 
 /*https://coolors.co/ccc9a1-f0ffce-a53f2b-4c230a-280004*/
